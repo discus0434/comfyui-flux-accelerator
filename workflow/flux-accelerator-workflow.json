@@ -1,6 +1,6 @@
 {
-  "last_node_id": 49,
-  "last_link_id": 186,
+  "last_node_id": 50,
+  "last_link_id": 196,
   "nodes": [
     {
       "id": 26,
@@ -14,7 +14,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 10,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -61,7 +61,7 @@
         {
           "name": "model",
           "type": "MODEL",
-          "link": 184,
+          "link": 190,
           "slot_index": 0
         },
         {
@@ -98,7 +98,7 @@
         "1": 106
       },
       "flags": {},
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -139,41 +139,6 @@
       ]
     },
     {
-      "id": 11,
-      "type": "DualCLIPLoader",
-      "pos": {
-        "0": 27,
-        "1": 274
-      },
-      "size": {
-        "0": 315,
-        "1": 106
-      },
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            152
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "DualCLIPLoader"
-      },
-      "widgets_values": [
-        "t5xxl_fp8_e4m3fn.safetensors",
-        "clip_l.safetensors",
-        "flux"
-      ]
-    },
-    {
       "id": 16,
       "type": "KSamplerSelect",
       "pos": {
@@ -185,7 +150,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -217,7 +182,7 @@
         "1": 164.31304931640625
       },
       "flags": {},
-      "order": 7,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -247,65 +212,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 30,
-      "type": "ModelSamplingFlux",
-      "pos": {
-        "0": 480,
-        "1": 1152
-      },
-      "size": {
-        "0": 315,
-        "1": 130
-      },
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 186,
-          "slot_index": 0
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "link": 115,
-          "slot_index": 1,
-          "widget": {
-            "name": "width"
-          }
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "link": 114,
-          "slot_index": 2,
-          "widget": {
-            "name": "height"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ModelSamplingFlux"
-      },
-      "widgets_values": [
-        1.1500000000000001,
-        0.5,
-        1024,
-        1024
-      ]
-    },
-    {
       "id": 25,
       "type": "RandomNoise",
       "pos": {
@@ -317,7 +223,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -334,18 +240,231 @@
         "Node name for S&R": "RandomNoise"
       },
       "widgets_values": [
-        1078257509656319,
+        1099122423654237,
         "randomize"
       ],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
     },
     {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 1006,
+        "1": 409
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 24
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 191
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            170
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 47,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 1009,
+        "1": 529
+      },
+      "size": {
+        "0": 504.5817565917969,
+        "1": 501.4833068847656
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 170
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 34,
+      "type": "PrimitiveNode",
+      "pos": {
+        "0": 430,
+        "1": 477
+      },
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            112,
+            115
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "width"
+          }
+        }
+      ],
+      "title": "width",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        1024,
+        "fixed"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 35,
+      "type": "PrimitiveNode",
+      "pos": {
+        "0": 672,
+        "1": 480
+      },
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            113,
+            114
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "title": "height",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        1024,
+        "fixed"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 39,
+      "type": "UNETLoader",
+      "pos": {
+        "0": 37,
+        "1": 134
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            188
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "flux1-schnell-fp8.safetensors",
+        "fp8_e4m3fn"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "VAELoader",
+      "pos": {
+        "0": 38,
+        "1": 270
+      },
+      "size": {
+        "0": 311.81634521484375,
+        "1": 60.429901123046875
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            189
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "taef1"
+      ]
+    },
+    {
       "id": 13,
       "type": "SamplerCustomAdvanced",
       "pos": {
-        "0": 1258,
-        "1": 361
+        "0": 1006,
+        "1": 231
       },
       "size": {
         "0": 272.3617858886719,
@@ -408,144 +527,11 @@
       }
     },
     {
-      "id": 8,
-      "type": "VAEDecode",
+      "id": 50,
+      "type": "🍭FluxAccelerator",
       "pos": {
-        "0": 1006,
-        "1": 409
-      },
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 24
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 182
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            170
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      }
-    },
-    {
-      "id": 47,
-      "type": "PreviewImage",
-      "pos": {
-        "0": 1009,
-        "1": 529
-      },
-      "size": {
-        "0": 504.5817565917969,
-        "1": 501.4833068847656
-      },
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 170
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
-    },
-    {
-      "id": 10,
-      "type": "VAELoader",
-      "pos": {
-        "0": 40,
-        "1": 450
-      },
-      "size": {
-        "0": 311.81634521484375,
-        "1": 60.429901123046875
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            181
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader"
-      },
-      "widgets_values": [
-        "taef1"
-      ]
-    },
-    {
-      "id": 39,
-      "type": "UNETLoader",
-      "pos": {
-        "0": 67,
-        "1": 133
-      },
-      "size": {
-        "0": 315,
-        "1": 82
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            183
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UNETLoader"
-      },
-      "widgets_values": [
-        "flux1-schnell-fp8.safetensors",
-        "fp8_e4m3fn"
-      ]
-    },
-    {
-      "id": 49,
-      "type": "FluxAccelerator",
-      "pos": {
-        "0": 1000,
-        "1": 187
+        "0": 38,
+        "1": 379
       },
       "size": {
         "0": 315,
@@ -558,12 +544,12 @@
         {
           "name": "model",
           "type": "MODEL",
-          "link": 183
+          "link": 188
         },
         {
           "name": "vae",
           "type": "VAE",
-          "link": 181
+          "link": 189
         }
       ],
       "outputs": [
@@ -571,9 +557,8 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            184,
-            185,
-            186
+            190,
+            193
           ],
           "shape": 3,
           "slot_index": 0
@@ -582,14 +567,14 @@
           "name": "VAE",
           "type": "VAE",
           "links": [
-            182
+            191
           ],
           "shape": 3,
           "slot_index": 1
         }
       ],
       "properties": {
-        "Node name for S&R": "FluxAccelerator"
+        "Node name for S&R": "🍭FluxAccelerator"
       },
       "widgets_values": [
         true,
@@ -598,55 +583,76 @@
       ]
     },
     {
-      "id": 34,
-      "type": "PrimitiveNode",
+      "id": 30,
+      "type": "ModelSamplingFlux",
       "pos": {
-        "0": 430,
-        "1": 477
+        "0": 480,
+        "1": 1152
       },
       "size": {
-        "0": 210,
-        "1": 82
+        "0": 315,
+        "1": 130
       },
       "flags": {},
-      "order": 5,
+      "order": 10,
       "mode": 0,
-      "inputs": [],
-      "outputs": [
+      "inputs": [
         {
-          "name": "INT",
+          "name": "model",
+          "type": "MODEL",
+          "link": 193,
+          "slot_index": 0
+        },
+        {
+          "name": "width",
           "type": "INT",
-          "links": [
-            112,
-            115
-          ],
-          "slot_index": 0,
+          "link": 115,
+          "slot_index": 1,
           "widget": {
             "name": "width"
           }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 114,
+          "slot_index": 2,
+          "widget": {
+            "name": "height"
+          }
         }
       ],
-      "title": "width",
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            196
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
       "properties": {
-        "Run widget replace on values": false
+        "Node name for S&R": "ModelSamplingFlux"
       },
       "widgets_values": [
+        1.1500000000000001,
+        0.5,
         1024,
-        "fixed"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
+        1024
+      ]
     },
     {
-      "id": 35,
-      "type": "PrimitiveNode",
+      "id": 11,
+      "type": "DualCLIPLoader",
       "pos": {
-        "0": 672,
-        "1": 480
+        "0": 39,
+        "1": 561
       },
       "size": {
-        "0": 210,
-        "1": 82
+        "0": 315,
+        "1": 106
       },
       "flags": {},
       "order": 6,
@@ -654,48 +660,43 @@
       "inputs": [],
       "outputs": [
         {
-          "name": "INT",
-          "type": "INT",
+          "name": "CLIP",
+          "type": "CLIP",
           "links": [
-            113,
-            114
+            152
           ],
           "slot_index": 0,
-          "widget": {
-            "name": "height"
-          }
+          "shape": 3
         }
       ],
-      "title": "height",
       "properties": {
-        "Run widget replace on values": false
+        "Node name for S&R": "DualCLIPLoader"
       },
       "widgets_values": [
-        1024,
-        "fixed"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
+        "t5xxl_fp8_e4m3fn.safetensors",
+        "clip_l.safetensors",
+        "flux"
+      ]
     },
     {
       "id": 17,
       "type": "BasicScheduler",
       "pos": {
-        "0": 480,
-        "1": 1008
+        "0": 478,
+        "1": 1007
       },
       "size": {
         "0": 315,
         "1": 106
       },
       "flags": {},
-      "order": 11,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 185,
+          "link": 196,
           "slot_index": 0
         }
       ],
@@ -714,7 +715,7 @@
       },
       "widgets_values": [
         "simple",
-        20,
+        4,
         1
       ]
     }
@@ -833,75 +834,62 @@
       "IMAGE"
     ],
     [
-      181,
-      10,
-      0,
-      49,
-      1,
-      "VAE"
-    ],
-    [
-      182,
-      49,
-      1,
-      8,
-      1,
-      "VAE"
-    ],
-    [
-      183,
+      188,
       39,
       0,
-      49,
+      50,
       0,
       "MODEL"
     ],
     [
-      184,
-      49,
+      189,
+      10,
+      0,
+      50,
+      1,
+      "VAE"
+    ],
+    [
+      190,
+      50,
       0,
       22,
       0,
       "MODEL"
     ],
     [
-      185,
-      49,
-      0,
-      17,
-      0,
-      "MODEL"
+      191,
+      50,
+      1,
+      8,
+      1,
+      "VAE"
     ],
     [
-      186,
-      49,
+      193,
+      50,
       0,
       30,
       0,
       "MODEL"
+    ],
+    [
+      196,
+      30,
+      0,
+      17,
+      0,
+      "MODEL"
     ]
   ],
-  "groups": [
-    {
-      "title": "Group",
-      "bounding": [
-        960,
-        100,
-        591,
-        950
-      ],
-      "color": "#3f789e",
-      "font_size": 24,
-      "flags": {}
-    }
-  ],
+  "groups": [],
   "config": {},
   "extra": {
     "ds": {
       "scale": 0.8256224620220637,
       "offset": [
-        -26.179609104476384,
-        -54.12878900046877
+        19.79895766928703,
+        14.328083056496402
       ]
     },
     "groupNodes": {}
