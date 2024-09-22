@@ -19,7 +19,7 @@ ComfyUI Flux Acceleratorは以下の方法で画像生成を高速化します:
 
     [`torchao`](https://github.com/pytorch/ao)と[`torch.compile()`](https://pytorch.org/docs/stable/generated/torch.compile.html)を利用して、AEを`float8`/`int8`に量子化するほか、モデルをコンパイルすることで動作を高速化します。
 
-3. **冗長なDiT Blocksの推論スキップ**
+3. **冗長なDiT Blocksのスキップ**
 
     ComfyUI Flux Acceleratorは、Flux.1内のTransformer Blockの評価を部分的にスキップするオプションを提供します。これにより、生成速度が直接的に向上します。
 
