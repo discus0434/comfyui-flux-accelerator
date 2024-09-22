@@ -113,6 +113,8 @@ Here are some examples (tested on RTX 4090):
 
 Just use the `FluxAccelerator` node in the workflow, and you're good to go!
 
+_**If your GPU has less than 24GB VRAM, you may encounter frequent Out Of Memory errors when changing parameters. But simply ignore them and run again and it will work!**_
+
 ## What are the limitations of ComfyUI Flux Accelerator?
 
 ComfyUI Flux Accelerator has the following limitations:
