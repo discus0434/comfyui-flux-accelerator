@@ -3,7 +3,7 @@
 > **Note**
 > 日本語のREADMEは[こちら](./README_ja.md)です。
 
-ComfyUI Flux Accelerator is a custom node for [ComfyUI](https://github.com/comfyanonymous/ComfyUI]) that enables you to generate images faster, by just using this node.
+ComfyUI Flux Accelerator is a custom node for [ComfyUI](https://github.com/comfyanonymous/ComfyUI]) that enables you to generate images faster, just by using this node.
 
 <p align="center">
   <img src="./assets/sample.gif" width=40%>
