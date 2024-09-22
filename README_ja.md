@@ -31,13 +31,19 @@ ComfyUI Flux Acceleratorは、デフォルト設定よりも最大で **_37.25%_
 
 以下にいくつかの例を示します（RTX 4090でテスト）:
 
-### 512x512 4steps: 0.51s → 0.32s
+### 512x512 4steps: 0.51s → 0.32s (37.25% faster)
 
 <p align="center">
   <img src="./assets/512x512_4steps.png" width=80%>
 </p>
 
-### 1024x1024 20steps: 8.77s → 5.74s
+### 1024x1024 4steps: 1.94s → 1.24s (36.08% faster)
+
+<p align="center">
+  <img src="./assets/1024x1024_4steps.png" width=80%>
+</p>
+
+### 1024x1024 20steps: 8.77s → 5.74s (34.55% faster)
 
 <p align="center">
   <img src="./assets/1024x1024_20steps.png" width=80%>
