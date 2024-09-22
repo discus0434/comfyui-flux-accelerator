@@ -26,7 +26,7 @@ class FluxAccelerator:
                 "model": ("MODEL",),
                 "vae": ("VAE",),
                 "do_compile": ("BOOLEAN", {"default": True}),
-                "mmdit_skip_blocks": ("STRING", {"default": "3,6"}),
+                "mmdit_skip_blocks": ("STRING", {"default": "3,12"}),
                 "dit_skip_blocks": ("STRING", {"default": ""}),
             }
         }
