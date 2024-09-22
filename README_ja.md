@@ -1,7 +1,7 @@
 # 🍭 ComfyUI Flux Accelerator
 
 ComfyUI Flux Acceleratorは、[ComfyUI](https://github.com/comfyanonymous/ComfyUI])用のカスタムノードです。
-モデルをこのカスタムノードに通すだけで、画像生成を高速化できます。
+Flux.1での画像生成時、モデルをこのカスタムノードに通すだけで、画像生成を高速化できます。
 
 <p align="center">
   <img src="./assets/sample.gif" width=60%>
