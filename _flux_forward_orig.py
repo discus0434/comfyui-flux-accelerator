@@ -54,7 +54,7 @@ def forward_orig(
     pe = self.pe_embedder(ids)
 
     for i, block in enumerate(self.double_blocks):
-        if i in self.mmdit_drop_layers_:
+        if i in self.mmdit_skip_blocks_:
             continue
         img, txt = block(img=img, txt=txt, vec=vec, pe=pe)
 
@@ -68,7 +68,7 @@ def forward_orig(
     img = torch.cat((txt, img), 1)
 
     for i, block in enumerate(self.single_blocks):
-        if i in self.dit_drop_layers_:
+        if i in self.dit_skip_blocks_:
             continue
 
         img = block(img, vec=vec, pe=pe)
