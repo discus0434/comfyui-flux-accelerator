@@ -127,7 +127,7 @@ ComfyUI Flux Accelerator has the following limitations:
 
 3. **Compatibility**
 
-    ComfyUI Flux Accelerator is now only compatible with Linux. In addition, it may not work with ControlNet.
+    ComfyUI Flux Accelerator is now only compatible with Linux.
 
 ## License
 
