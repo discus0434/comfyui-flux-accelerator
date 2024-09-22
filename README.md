@@ -97,7 +97,7 @@ Here are some examples (tested on RTX 4090):
     python main.py
     ```
 
-4. **Load [the workflow](./workflow/flux_accelerator_workflow.json) in the `workflow` folder**
+4. **Load [the workflow](./workflow/flux-accelerator-workflow.json) in the `workflow` folder**
 
       _You can load the workflow by clicking the `Load` button in the ComfyUI._
 

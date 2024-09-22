@@ -96,7 +96,7 @@ ComfyUI Flux Acceleratorは、デフォルト設定よりも最大で **_37.25%_
     python main.py
     ```
 
-5. **`workflow`フォルダ内の[ワークフロー](./workflow/flux_accelerator_workflow.json)をロード**
+5. **`workflow`フォルダ内の[ワークフロー](./workflow/flux-accelerator-workflow.json)をロード**
 
       ComfyUIの`Load`ボタンをクリックしてワークフローをロードできます。
 
