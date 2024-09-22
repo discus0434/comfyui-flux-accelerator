@@ -112,6 +112,8 @@ ComfyUI Flux Acceleratorは、デフォルト設定よりも最大で **_37.25%_
 
 ワークフロー内で `FluxAccelerator` ノードを使用し、`MODEL`と`VAE`を接続するだけです。
 
+_**もしGPUのVRAMが24GB以下の場合、パラメータの変更時頻繁にOut Of Memoryエラーに遭遇するかもしれませんが、単に無視してもう一度実行し直せば動作します。**_
+
 ## What are the limitations of ComfyUI Flux Accelerator?
 
 ComfyUI Flux Acceleratorには以下の制限があります：
