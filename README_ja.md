@@ -64,11 +64,11 @@ ComfyUI Flux Acceleratorは、デフォルト設定よりも最大で **_37.25%_
     ## Copied and modified https://github.com/facebookresearch/xformers/blob/main/README.md
 
     # cuda 11.8 version
-    pip3 install -U torch torchvision triton xformers --index-url https://download.pytorch.org/whl/cu118
+    pip3 install -U torch torchvision torchao triton xformers --index-url https://download.pytorch.org/whl/cu118
     # cuda 12.1 version
-    pip3 install -U torch torchvision triton xformers --index-url https://download.pytorch.org/whl/cu121
+    pip3 install -U torch torchvision torchao triton xformers --index-url https://download.pytorch.org/whl/cu121
     # cuda 12.4 version
-    pip3 install -U torch torchvision triton xformers --index-url https://download.pytorch.org/whl/cu124
+    pip3 install -U torch torchvision torchao triton xformers --index-url https://download.pytorch.org/whl/cu124
     ```
 
 3. **[TAEF1](https://github.com/madebyollin/taesd)をダウンロード**
