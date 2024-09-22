@@ -25,7 +25,7 @@ ComfyUI Flux Accelerator accelerates the generation of images by:
 
     ComfyUI Flux Accelerator offers an option to skip redundant DiT blocks, which directly affects the speed of the generation.
 
-    You can choose the number of blocks to skip in the node (default is 3, 6, 8, 12 of MMDiT blocks).
+    You can choose the number of blocks to skip in the node (default is 3, 12 of MMDiT blocks).
 
 ## How much faster is ComfyUI Flux Accelerator?
 
