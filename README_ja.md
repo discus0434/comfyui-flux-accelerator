@@ -23,7 +23,7 @@ ComfyUI Flux Acceleratorは以下の方法で画像生成を高速化します:
 
     ComfyUI Flux Acceleratorは、Flux.1内のTransformer Blockの評価を部分的にスキップするオプションを提供します。これにより、生成速度が直接的に向上します。
 
-    当ノードのオプションでスキップするBlockのインデックスを選択できます（デフォルトはMMDiT Blocksの3,6,8,12）。
+    当ノードのオプションでスキップするBlockのインデックスを選択できます（デフォルトはMMDiT Blocksの3,12）。
 
 ## How much faster is ComfyUI Flux Accelerator?
 
