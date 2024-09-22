@@ -48,7 +48,8 @@ ComfyUI Flux Acceleratorは、デフォルト設定よりも最大で **_37.25%_
 1. **リポジトリをクローンして、ComfyUIの`custom_nodes`フォルダに配置する**
 
     ```bash
-    git clone
+    git clone https://github.com/discus0434/comfyui-flux-accelerator.git
+    mv comfyui-flux-accelerator custom_nodes/
     ```
 
 2. **[TAEF1](https://github.com/madebyollin/taesd)をダウンロード**

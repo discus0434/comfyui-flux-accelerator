@@ -50,7 +50,8 @@ Here are some examples (tested on RTX 4090):
 1. **Clone this repository and place it in the `custom_nodes` folder of ComfyUI**
 
     ```bash
-    git clone
+    git clone https://github.com/discus0434/comfyui-flux-accelerator.git
+    mv comfyui-flux-accelerator custom_nodes/
     ```
 
 2. **Download [TAEF1](https://github.com/madebyollin/taesd) with the following command**
