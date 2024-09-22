@@ -60,7 +60,20 @@ Here are some examples (tested on RTX 4090):
     mv comfyui-flux-accelerator custom_nodes/
     ```
 
-2. **Download [TAEF1](https://github.com/madebyollin/taesd) with the following command**
+2. **Install PyTorch and xFormers**
+
+    ```bash
+    ## Copied and modified https://github.com/facebookresearch/xformers/blob/main/README.md
+
+    # cuda 11.8 version
+    pip3 install -U torch torchvision triton xformers --index-url https://download.pytorch.org/whl/cu118
+    # cuda 12.1 version
+    pip3 install -U torch torchvision triton xformers --index-url https://download.pytorch.org/whl/cu121
+    # cuda 12.4 version
+    pip3 install -U torch torchvision triton xformers --index-url https://download.pytorch.org/whl/cu124
+    ```
+
+3. **Download [TAEF1](https://github.com/madebyollin/taesd) with the following command**
 
     ```bash
     cd custom_nodes/comfyui-flux-accelerator
@@ -68,20 +81,7 @@ Here are some examples (tested on RTX 4090):
     ./scripts/download_taef1.sh
     ```
 
-3. **(Optional) Install xFormers**
-
-    ```bash
-    ## Copied from https://github.com/facebookresearch/xformers/blob/main/README.md
-
-    # [linux only] cuda 11.8 version
-    pip3 install -U xformers --index-url https://download.pytorch.org/whl/cu118
-    # [linux only] cuda 12.1 version
-    pip3 install -U xformers --index-url https://download.pytorch.org/whl/cu121
-    # [linux & win] cuda 12.4 version
-    pip3 install -U xformers --index-url https://download.pytorch.org/whl/cu124
-    ```
-
-3. **Launch ComfyUI**
+4. **Launch ComfyUI**
 
     _Launch command may vary depending on your environment._
 
@@ -103,11 +103,11 @@ Here are some examples (tested on RTX 4090):
     python main.py
     ```
 
-4. **Load [the workflow](./workflow/flux-accelerator-workflow.json) in the `workflow` folder**
+5. **Load [the workflow](./workflow/flux-accelerator-workflow.json) in the `workflow` folder**
 
       _You can load the workflow by clicking the `Load` button in the ComfyUI._
 
-5. **Enjoy!**
+6. **Enjoy!**
 
 ## How to use ComfyUI Flux Accelerator?
 

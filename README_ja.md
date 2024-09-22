@@ -58,26 +58,26 @@ ComfyUI Flux Acceleratorは、デフォルト設定よりも最大で **_37.25%_
     mv comfyui-flux-accelerator custom_nodes/
     ```
 
-2. **[TAEF1](https://github.com/madebyollin/taesd)をダウンロード**
+2. **PyTorchとxFormersをインストール**
+
+    ```bash
+    ## Copied and modified https://github.com/facebookresearch/xformers/blob/main/README.md
+
+    # cuda 11.8 version
+    pip3 install -U torch torchvision triton xformers --index-url https://download.pytorch.org/whl/cu118
+    # cuda 12.1 version
+    pip3 install -U torch torchvision triton xformers --index-url https://download.pytorch.org/whl/cu121
+    # cuda 12.4 version
+    pip3 install -U torch torchvision triton xformers --index-url https://download.pytorch.org/whl/cu124
+    ```
+
+3. **[TAEF1](https://github.com/madebyollin/taesd)をダウンロード**
 
     以下のコマンドを使用してダウンロードします。
     ```bash
     cd custom_nodes/comfyui-flux-accelerator
     chmod +x scripts/download_taef1.sh
     ./scripts/download_taef1.sh
-    ```
-
-3. **（オプション）xFormersをインストール**
-
-    ```bash
-    ## https://github.com/facebookresearch/xformers/blob/main/README.md からコピー
-
-    # [Linuxのみ] CUDA 11.8 バージョン
-    pip3 install -U xformers --index-url https://download.pytorch.org/whl/cu118
-    # [Linuxのみ] CUDA 12.1 バージョン
-    pip3 install -U xformers --index-url https://download.pytorch.org/whl/cu121
-    # [Linux & Windows] CUDA 12.4 バージョン
-    pip3 install -U xformers --index-url https://download.pytorch.org/whl/cu124
     ```
 
 4. **ComfyUIを起動**
