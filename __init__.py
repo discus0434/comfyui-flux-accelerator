@@ -14,7 +14,6 @@ from _flux_forward_orig import forward_orig
 from _utils import has_affordable_memory, is_newer_than_ada_lovelace
 
 torch.backends.cudnn.allow_tf32 = True
-torch.backends.cudnn.benchmark = True
 torch.set_float32_matmul_precision("medium")
 
 
